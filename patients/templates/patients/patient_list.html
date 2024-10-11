@@ -1,0 +1,176 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    <title>Accueil</title>
+
+<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<meta name="theme-color" content="#712cf9">
+    <link href="{% static 'assets/css/dashboard.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+    
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Devoir 1</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Accueil</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0 pt-5">
+  <div class="container pt-5">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary my-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Ajouter un patient
+    </button>
+  
+  <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content rounded-4 shadow">
+              <div class="modal-header p-5 pb-4 border-bottom-0">
+                <h1 class="fw-bold mb-0 fs-3 text-center">Ajout de patient</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+        
+              <div class="modal-body p-5 pt-0">
+                <form action="" class="" method="post">
+                {% csrf_token %}
+                  <!-- Nom complet -->
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control rounded-3" id="nom" name="nom_complet" placeholder="Nom" required>
+                    <label for="nom">Nom complet :</label>
+                  </div>
+
+                <!-- Date de naissance -->
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="dob" name="date_naissance" placeholder="Date de naissance" required>
+                    <label for="dob" class="form-label">Date de naissance :</label>
+                </div>
+
+                <!-- Sexe -->
+                <div class="form-floating mb-3">
+                    <label class="form-label">Sexe :</label><br><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="homme" name="sexe" value="M">
+                        <label class="form-check-label" for="homme">Homme</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" id="femme" name="sexe" value="F">
+                        <label class="form-check-label" for="femme">Femme</label>
+                    </div>
+                </div>
+
+                <!-- Adresse -->
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="adresse" name="adresse" rows="3" placeholder="Adresse" required></textarea>
+                    <label for="adresse" class="form-label">Adresse :</label>
+                </div>
+
+                <!-- Numéro de téléphone -->
+                <div class="form-floating mb-3">
+                    <input type="tel" class="form-control" id="tel" name="telephone" placeholder="Numéro de téléphone" required>
+                    <label for="tel" class="form-label">Numéro de téléphone :</label>
+                </div>
+
+                <!-- Adresse email -->
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" placeholder="Adresse email" id="email" name="email" required>
+                    <label for="email" class="form-label">Adresse email :</label>
+                </div>
+
+                <!-- Groupe sanguin -->
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="groupe_sanguin" name="groupe_sanguin" required>
+                        <option value="">Sélectionnez...</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                    <label for="groupe_sanguin" class="form-label">Groupe sanguin :</label>
+                </div>
+
+                <!-- Date et heure d'enregistrement -->
+                <div class="form-floating mb-3">
+                    <input type="datetime-local" class="form-control" id="enregistrement" placeholder="Date d'enregistrement" name="date_enregistrement" required>
+                    <label for="enregistrement" class="form-label">Date d'enregistrement :</label>
+                </div>
+
+                <!-- Historique médical -->
+                <div class="form-floating mb-3">
+                    <textarea class="form-control" id="historique" placeholder="Historique médical" name="historique_medical" rows="5"></textarea>
+                    <label for="historique" class="form-label">Historique médical :</label>
+                </div>
+
+                <!-- Consentement -->
+                 <br>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="consentement" placeholder="Consentement" name="consentement" required>
+                    <label class="form-check-label" for="consentement">
+                        Consentement pour le traitement médical
+                    </label>
+                </div>
+
+                  <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Enregistrer</button>
+                </form>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="row mb-2">
+    {% for patient in patients %}
+    <div class="col-md-4">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary-emphasis">{{ patient.nom_complet }}</strong>
+            <h3 class="mb-0">A+</h3>
+            <div class="mb-1 text-body-secondary">Date de naissance: {{ patient.date_naissance }}</div>
+            <p class="card-text mb-auto">Historique: {{ patient.historique_medical }}</p>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+
+  </div>
+</main>
+<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
