@@ -83,11 +83,11 @@
                 <div class="form-floating mb-3">
                     <label class="form-label">Sexe :</label><br><br>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="homme" name="sexe" value="M">
+                        <input class="form-check-input" type="radio" id="homme" name="sexe" value=0>
                         <label class="form-check-label" for="homme">Homme</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="femme" name="sexe" value="F">
+                        <input class="form-check-input" type="radio" id="femme" name="sexe" value=1>
                         <label class="form-check-label" for="femme">Femme</label>
                     </div>
                 </div>
@@ -104,10 +104,21 @@
                     <label for="tel" class="form-label">Numéro de téléphone :</label>
                 </div>
 
+                <!-- Temperature Corporel -->
+                <div class="form-floating mb-3">
+                    <input type="number" step="0.01" class="form-control" id="bodyTemperature" name="bodyTemperature" placeholder="Temperature Corporel" required>
+                    <label for="bodyTemperature" class="form-label">Temperature Corporel :</label>
+                </div>
+
                 <!-- Adresse email -->
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control" placeholder="Adresse email" id="email" name="email" required>
                     <label for="email" class="form-label">Adresse email :</label>
+                </div>
+                <!-- Lien antécédent -->
+                <div class="form-floating mb-3">
+                    <input type="url" class="form-control" placeholder="Lien d'antécédent médical" id="medicalHistoryLink" name="medicalHistoryLink" required>
+                    <label for="medicalHistoryLink" class="form-label">Lien d'antécédent médical :</label>
                 </div>
 
                 <!-- Groupe sanguin -->
@@ -130,12 +141,6 @@
                 <div class="form-floating mb-3">
                     <input type="datetime-local" class="form-control" id="enregistrement" placeholder="Date d'enregistrement" name="date_enregistrement" required>
                     <label for="enregistrement" class="form-label">Date d'enregistrement :</label>
-                </div>
-
-                <!-- Historique médical -->
-                <div class="form-floating mb-3">
-                    <textarea class="form-control" id="historique" placeholder="Historique médical" name="historique_medical" rows="5"></textarea>
-                    <label for="historique" class="form-label">Historique médical :</label>
                 </div>
 
                 <!-- Consentement -->
@@ -161,7 +166,13 @@
             <strong class="d-inline-block mb-2 text-primary-emphasis">{{ patient.nom_complet }}</strong>
             <h3 class="mb-0">A+</h3>
             <div class="mb-1 text-body-secondary">Date de naissance: {{ patient.date_naissance }}</div>
-            <p class="card-text mb-auto">Historique: {{ patient.historique_medical }}</p>
+            <p class="card-text mb-auto">Température Corporel: {{ patient.bodyTemperature }} Groupe Sanguin: {{ patient.groupe_sanguin }}
+              <br> Email: {{patient.email}} <br>Téléphone: {{patient.telephone}}
+            </p>
+            <a href="{{ patient.medicalHistoryLink }}" class="icon-link gap-1 icon-link-hover stretched-link">
+              Historique médical
+              <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+            </a>
         </div>
         </div>
     </div>
